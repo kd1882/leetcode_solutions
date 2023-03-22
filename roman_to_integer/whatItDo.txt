@@ -1,0 +1,44 @@
+Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+
+
+I can be placed before V (5) and X (10) to make 4 and 9. 
+X can be placed before L (50) and C (100) to make 40 and 90. 
+C can be placed before D (500) and M (1000) to make 400 and 900.
+
+
+1 <= s.length <= 15
+s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
+It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
+What I did right:
+
+    - Just started coding, idea was to place roman values in a dict with their corresponding numerical values
+    which I did. Set as a global variable.
+    - Next step was to iterate through the incoming string, then loop through the keys and values of the dict.
+    - Empty variable labeled count_value = 0, would then have the corresponding k,v added to it, which worked for.
+    case1: III, case2: LVIII, failed on case3: MCMXCIV.
+
+Why it failed:
+    - MCM read in as 1000, 100, 1000.
+    How to fix it:
+        - Specific rules for the roman numerals which can possibly be type casted.
+
+What I can do better:
+    - Stage fright for the first few minutes. Just poking around, once I started coding everything got more fluid.
+    - Python Documentation: Flailed around quite a bit when A. Tried looking up how to split out integers in strings,
+    and how to properly loop through dictionaries. Did not need to split the string, and forgot that dicts could be 
+    looped by for k, v in roman_dict.items():
+    - Looked in the Python Standard Library docs, meant for modules, Best page I've seen thus far is
+    https://docs.python.org/3/contents.html
+
+For next time:
+    - Summarize problem, identify future edge cases, start coding.
+    - Refer to https://docs.python.org/3/contents.html, don't bumble around.
+    

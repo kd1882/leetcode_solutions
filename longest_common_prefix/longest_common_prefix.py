@@ -17,4 +17,4 @@ class Solution:
             else:
                 break
 
-    return common_prefix
+        return common_prefix

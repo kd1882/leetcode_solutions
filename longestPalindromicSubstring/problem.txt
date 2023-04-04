@@ -1,0 +1,40 @@
+Given a string s, return the longest 
+palindromic
+ 
+substring
+ in s.
+
+ 
+
+Example 1:
+
+Input: s = "babad"
+Output: "bab"
+Explanation: "aba" is also a valid answer.
+Example 2:
+
+Input: s = "cbbd"
+Output: "bb"
+ 
+
+Constraints:
+
+1 <= s.length <= 1000
+s consist of only digits and English letters.
+
+
+This code defines a function that finds the longest palindrome in a given string 's'. A palindrome is a string that can be read from left to right and vice versa. 
+The function first checks if the length of the given string 's' is less than 2, and if it is so, it directly returns the string itself because a single character string is a palindrome. 
+
+
+Then, the function initializes an empty string variable called 'res'. It then defines a nested function called 'expandPalindrome(left: int, right: int) -> str', which 
+takes two arguments- left and right, representing the leftmost and rightmost position of the current palindrome. This function checks if the current palindrome is valid 
+by comparing the characters at the left and right positions, moving both positions towards the center one character at a time until an invalid character or the edge of the 
+string is reached. If the current palindrome is valid, the current left and right positions are returned as a palindrome string.
+
+
+The function then iterates over every position in the given string and calls the 'expandPalindrome' function twice for each position- first assuming that the longest palindrome might be 
+odd in length, and second, assuming that it might be even. The longest palindrome string found so far is stored in the 'res' variable, which is updated if a longer palindrome is found.
+
+
+Finally, the function returns the longest palindrome string found over all the iterations.

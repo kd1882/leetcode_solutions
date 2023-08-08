@@ -1,2 +1,3 @@
 # leetcode_solutions
-### If you want to get insight into how my brain tries to solve coding problems... Well, here you go.
+
+Various leetcode solutions I've done and placed here for practice and to give encouragement when impostor syndrome comes around.
